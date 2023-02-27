@@ -6,19 +6,8 @@
 // package calculator: defines a package that can be used as a dependency (helper code/ reusable package)
 package main
 
-import "fmt"
-
 func main() {
-	// var card string = "Ace of Spades"
-	// := is used for variable initialization
-	card := newCard()
-	var deckSize int
-  deckSize = 52
-	fmt.Println(deckSize)
-	fmt.Println(card)
-}
-
-
-func newCard() string {
-	return "Five of Diamonds"
+	cards := newDeck()
+	cards.shuffle()
+	cards.print()
 }
